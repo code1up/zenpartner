@@ -11,6 +11,6 @@ app.get("/", function(req, res) {
 	res.redirect("/index.html");
 });
 
-app.listen(3000);
+app.listen(process.env["app_port"] || 3000);
 
 console.log("\n<<< started");
