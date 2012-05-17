@@ -1,0 +1,5 @@
+sdk/
+.DS_Store
+node_modules/
+.senchasdk
+
