@@ -1,6 +1,5 @@
 var express = require("express");
 var fs = require("fs");
-// var ws = require("./zenws/usagews.js");
 
 var app = express.createServer();
 
