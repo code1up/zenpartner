@@ -3,3 +3,4 @@ sdk/
 node_modules/
 .senchasdk
 
+.sass-cache/

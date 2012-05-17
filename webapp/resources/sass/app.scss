@@ -1,19 +1,169 @@
+//////////////////////////////////////////////////////////////////////
+//
+// Custom app colors
+
+$zen-green: #00928F;
+$gray: #888888;
+
+//////////////////////////////////////////////////////////////////////
+//
+// Core app-specific theme variables
+
+$base-color: $zen-green;
+$active-color: #40E0D0;
+
+// Options: ‘matte’, ‘bevel’, ‘glossy’, ‘recessed’, and ‘flat’.
+$base-gradient: 'glossy';
+
+//////////////////////////////////////////////////////////////////////
+//
+// Sencha Touch 2 module import and includes
+
 @import 'sencha-touch/default/all';
 
-// You may remove any of the following modules that you
-// do not use in order to create a smaller css file.
 @include sencha-panel;
 @include sencha-buttons;
-@include sencha-sheet;
-@include sencha-picker;
+// @include sencha-sheet;
+// @include sencha-picker;
 @include sencha-tabs;
 @include sencha-toolbar;
-@include sencha-toolbar-forms;
-@include sencha-indexbar;
+// @include sencha-toolbar-forms;
+// @include sencha-indexbar;
 @include sencha-list;
 @include sencha-layout;
-@include sencha-carousel;
-@include sencha-form;
+// @include sencha-carousel;
+// @include sencha-form;
 @include sencha-msgbox;
 
-// Your custom code goes here...
+//////////////////////////////////////////////////////////////////////
+//
+// Icons
+//
+
+$include-default-icons: false;
+
+@include pictos-iconmask(chat_black1);
+@include pictos-iconmask(help_black);
+@include pictos-iconmask(layout);
+@include pictos-iconmask(list);
+@include pictos-iconmask(refresh);
+@include pictos-iconmask(expand);
+@include pictos-iconmask(twitter2);
+@include pictos-iconmask(warning_black);
+
+//////////////////////////////////////////////////////////////////////
+//
+// Loading spinner
+//
+
+$loading-spinner-color: $base-color;
+@include sencha-loading-spinner();
+
+//////////////////////////////////////////////////////////////////////
+//
+// App-specific styles
+//
+
+//////////
+//
+// Blog
+//
+
+.blog-precis-wrapper {
+	.blog-precis-title {
+		font-weight: bold;
+		font-size: x-large;
+		text-transform: uppercase;
+		color: $zen-green;
+	}
+	.blog-precis-who-when {
+		font-weight: bold;
+		font-size: medium;
+		color: $gray;
+	}
+	.blog-precis-snippet {
+		font-size: medium;
+	}
+}
+
+.blog-post-wrapper {
+	.blog-post-logo {
+		float: right;
+		max-width: 64px;
+		max-height: 64px;
+	}
+	.blog-post-title {
+		font-weight: bold;
+		font-size: x-large;
+		text-transform: uppercase;
+		color: $zen-green;
+	}
+	.blog-post-who-when {
+		font-weight: bold;
+		font-size: medium;
+		color: $gray;
+	}
+	.blog-post-content {
+		font-size: medium;
+		a {
+			font-weight: bold;
+			color: $zen-green;
+			text-decoration: none;		
+		}
+	}
+}
+
+//////////
+//
+// Tweet
+//
+
+// TODO: need to radically prune this SASS
+.tweet-wrapper {
+	img {
+		float: left;
+		border-radius: 5px;
+		box-shadow: 4px 4px 2px $gray;
+	}
+	.tweet-user {
+		a {
+			font-size: large;
+			font-weight: bold;
+			color: $zen-green;
+			text-decoration: none;
+		}
+	}
+	.tweet {
+		margin-left: 60px;
+		min-height: 50px;
+	}
+	.tweet-aside {
+		font-size: medium;
+		float: right;
+		color: $gray;
+	}
+	.tweet-text {
+		font-size: medium;
+	}
+	.tweet-text-user {
+		a {
+			font-size: medium;
+			font-weight: bold;
+			color: $zen-green;
+			text-decoration: none;
+		}
+	}
+	.tweet-text-url {
+		a {
+			font-size: medium;
+			font-weight: bold;
+			color: $zen-green;
+			text-decoration: none;
+		}
+	}
+	.tweet-text-hashtag {
+		font-size: medium;
+		font-weight: bold;
+		color: $gray;
+	}
+}
